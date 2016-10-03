@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-<div class="content section-inner">		
+<div class="content section-inner" style="max-width: 100%; background-color: #fff">		
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>				
 	
@@ -22,13 +22,13 @@
 			
 			<div class="post-header">
 												
-				<h1 class="post-title"><?php the_title(); ?></h1>
+				<!-- <h1 class="post-title"><?php the_title(); ?></h1> -->
 			
 			</div>
 			
 			<div class="post-inner">
 				    
-			    <div class="post-content">
+			    <div class="post-content page-content" style="padding: 0 5%">
 			    
 			    	<?php the_content(); ?>
 					

@@ -8,7 +8,21 @@ jQuery(document).ready(function($) {
 	// Toggle navigation
 	$(".nav-toggle").on("click", function(){	
 		$(this).toggleClass("active");
-		$(".mobile-navigation").slideToggle();
+		if($(this).hasClass("active")){
+			$('body').css('overflow', 'hidden');
+			$(this).css('position','fixed');
+			$(".navigation").css('visibility', 'visible');
+			$(".navigation").css('opacity', '1');
+			$(".blog-title a").css('color','#fff');
+		} else {
+			$(this).css('position','absolute');
+			$('body').css('overflow', 'scroll');
+			$(".navigation").css('opacity', '0');
+			$(".blog-title a").css('color','#000');
+			setTimeout(function(){
+				$(".navigation").css('visibility', 'hidden');
+			},200);
+		}
 		return false;
 	});
 	

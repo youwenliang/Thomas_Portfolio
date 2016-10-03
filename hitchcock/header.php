@@ -13,6 +13,16 @@
 	
 	<body <?php body_class(); ?>>
 		
+		<div class="nav-toggle">
+					
+			<div class="bars">
+				<div class="bar"></div>
+				<div class="bar"></div>
+				<div class="bar"></div>
+			</div>
+			
+		</div> <!-- /nav-toggle -->
+
 		<div class="navigation">
 			
 			<div class="section-inner">
@@ -38,12 +48,12 @@
 						
 					} ?>
 					
-					<li class="header-search">
+					<!-- <li class="header-search">
 						<form method="get" class="search-form" id="search-form" action="<?php echo esc_url( home_url( '/' ) ); ?>">
 							<input type="search" class="search-field" name="s" placeholder="<?php _e('Search Form','hitchcock'); ?>" /> 
 							<a class="search-button" onclick="document.getElementById('search-form').submit(); return false;"><div class="fa fw fa-search"></div></a>
 						</form>
-					</li>
+					</li> -->
 					
 				</ul>
 				
@@ -51,17 +61,7 @@
 				
 			</div> <!-- /section-inner -->
 			
-			<div class="nav-toggle">
-					
-				<div class="bars">
-					<div class="bar"></div>
-					<div class="bar"></div>
-					<div class="bar"></div>
-				</div>
-				
-			</div> <!-- /nav-toggle -->
-			
-			<div class="mobile-navigation">
+			<!-- <div class="mobile-navigation">
 			
 				<ul class="mobile-menu">
 																			
@@ -86,9 +86,9 @@
 						
 					</ul>
 					
-					<?php get_search_form(); ?>
+					<!--<?php get_search_form(); ?>-->
 			
-			</div> <!-- /mobile-navigation -->
+			</div> <!-- /mobile-navigation --> -->
 			
 		</div> <!-- /navigation -->
 		
