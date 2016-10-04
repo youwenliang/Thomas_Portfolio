@@ -28,7 +28,7 @@
 			
 			<div class="post-inner">
 				    
-			    <div class="post-content page-content" style="padding: 0 5%">
+			    <div class="post-content page-content">
 			    
 			    	<?php the_content(); ?>
 					
@@ -38,7 +38,7 @@
 			    
 			    <div class="clear"></div>
 			    
-			    <?php edit_post_link(__('Edit Page','hitchcock'), '<div class="post-meta"><p class="post-edit">', '</p></div>'); ?>
+			    <?php edit_post_link(__('Edit Page','hitchcock'), '<div class="post-meta page-meta"><p class="post-edit">', '</p></div>'); ?>
 	
 			</div> <!-- /post-inner -->
 			

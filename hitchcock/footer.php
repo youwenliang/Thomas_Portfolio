@@ -1,10 +1,11 @@
-<div class="credits section-inner">
+<!-- <div class="credits section-inner">
 			
 	<p class="footer">&copy; <?php echo date('Y'); ?> <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo('name'); ?></a></p>
 	
 	<div class="clear"></div>
 	
-</div> <!-- /credits -->
+</div>  -->
+<!-- /credits -->
 
 <?php wp_footer(); ?>
 
