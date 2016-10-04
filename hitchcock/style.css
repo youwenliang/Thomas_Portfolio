@@ -711,9 +711,9 @@ input[type="button"],
 	 transition: all 0.2s ease-in-out;
 }
 
-.post-overlay:hover {
+a.post:hover .post-overlay {
 	opacity: 1;
-	background: rgba(0,0,0,0.3);
+	background: rgba(0,0,0,0.4);
 	-webkit-transition: all 0.2s ease-in-out;
 	 -moz-transition: all 0.2s ease-in-out;
 	 -ms-transition: all 0.2s ease-in-out;
@@ -741,7 +741,7 @@ input[type="button"],
 	position: relative;
 	top: 50%;
 	bottom: 0;
-	margin: auto 30px;
+	margin: auto 20%;
 	transform: translateY(-50%);
 	/*height: 25%;*/
 }
@@ -781,10 +781,10 @@ input[type="button"],
 
 /* With Background Image */
 
-.has-post-thumbnail .post-overlay { 
+/*.has-post-thumbnail .post-overlay { 
 	background: rgba(0,0,0,0.75);
 	opacity: 0; 
-}
+}*/
 
 .has-post-thumbnail .archive-post-header { bottom: 35px; }
 .has-post-thumbnail:hover .archive-post-header { bottom: 30px; }
@@ -2191,6 +2191,7 @@ img#wpstats { display: none; }
 
 	.archive-post-header {
 		top: 106%;
+		margin: auto 30px;
 		transform: translateY(0);
 	}
 
@@ -2323,6 +2324,8 @@ img#wpstats { display: none; }
 
 	.archive-post-header {
 		top: 106%;
+		margin: auto 0px;
+		max-width: 90%;
 		transform: translateY(0);
 	}
 
