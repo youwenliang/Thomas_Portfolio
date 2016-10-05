@@ -50,7 +50,7 @@ h1, h2, h3, h4, h5, h6, p, blockquote, address, big, cite, code, em, font, img, 
 	border:0;
 	font-weight:normal;
 	font-style:normal;
-	font-size:100%;
+	font-size:110%;
 	line-height:1;
 	font-family:Helvetica;
 	text-align:left;
@@ -1078,7 +1078,7 @@ a.post:hover .post-overlay {
 
 .post-info {
 	position: relative; 
-	width: 250px;
+	width: 200px;
 	float: left;
 	display: inline-block;
 	margin: 0 20px 20px 0;
@@ -1109,7 +1109,9 @@ a.post:hover .post-overlay {
 	position: relative;
 	top: 0px;
 	/*left: 250px;*/
-	/*width: calc(100% - 250px);*/
+	width: calc(100% - 200px);
+	float: right;
+	padding-left: 20px;
 }
 
 .page-content {
@@ -1129,7 +1131,7 @@ a.post:hover .post-overlay {
 }
 
 
-.post-content *:last-child { margin-bottom: 0; margin-top: 100px; }
+.post-content *:last-child { margin-bottom: 50px; }
 
 .post-content h1, .post-content h2, .post-content h3, .post-content h4, .post-content h5, .post-content h6 { 
 	margin: 50px 0 25px; 
@@ -1158,12 +1160,14 @@ a.post:hover .post-overlay {
 
 
 .post-content blockquote {
-	margin: 30px 0;
-	padding: 30px;
+	margin: 60px 0 30px 0;
+	/*padding: 30px;*/
 	/*background: #fafafa;*/
 	position: relative;
-	color: #000;
-	font-size: 3em;
+}
+.post-content blockquote p{
+	color: #fff;
+	font-size: 2.5em;
 	font-weight: bold !important;
 	line-height: 1.2 !important;
 	/*font-style: italic;*/
@@ -1343,7 +1347,7 @@ code, kbd, pre {
 
 .post-content .aligncenter {
 	display: block;
-	margin: 30px auto 30px -16.67%;
+	margin: 60px auto 60px -16.67%;
 	min-width: 133%;
 }
 

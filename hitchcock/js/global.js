@@ -39,19 +39,24 @@ jQuery(document).ready(function($) {
 		e.stopPropagation();
 	});
 	
-	var h0 = $(".post-info").height();
+	
 
 	if ($(window).width() > 782) {
-		var h1 = h0;
-		var h2 = $(".post-content *:first-child").height();
-
-		if(h1 > h2) $(".post-content *:first-child").height(h1);
-		else if(h1 < h2) $(".post-info").height(h2);
-		console.log("???");
+		var h0 = $(".post-info").height();
+		$(".post-content *:first-child").css('top',h0*-1-20);
 	} else {
-		$(".post-info").height("auto");
-		$(".post-content *:first-child").height("auto");
+		$(".post-content *:first-child").css('top',0);
 	}
+	// 	var h1 = h0;
+	// 	var h2 = $(".post-content *:first-child").height();
+
+	// 	if(h1 > h2) $(".post-content *:first-child").height(h1);
+	// 	else if(h1 < h2) $(".post-info").height(h2);
+	// 	console.log("???");
+	// } else {
+	// 	$(".post-info").height("auto");
+	
+	// }
 	
 	
 	$(".header-blank").height($(".header-blank .post-meta li").height() + 1.5 * $(".header-blank .post-meta li").offset().top);
@@ -66,16 +71,24 @@ jQuery(document).ready(function($) {
 			$(".nav-toggle").removeClass("active");
 			$(".mobile-navigation").hide();
 		}
-		if ($(window).width() > 782) {
-			var h1 = h0;
-			var h2 = $(".post-content *:first-child").height();
 
-			if(h1 > h2) $(".post-content *:first-child").height(h1);
-			else if(h1 < h2) $(".post-info").height(h2);
+		if ($(window).width() > 782) {
+			var h0 = $(".post-info").height();
+			$(".post-content *:first-child").css('top',h0*-1-20);
 		} else {
-			$(".post-info").height("auto");
-			$(".post-content *:first-child").height("auto");
+			$(".post-content *:first-child").css('top',0);
 		}
+
+		// if ($(window).width() > 782) {
+		// 	var h1 = h0;
+		// 	var h2 = $(".post-content *:first-child").height();
+
+		// 	if(h1 > h2) $(".post-content *:first-child").height(h1);
+		// 	else if(h1 < h2) $(".post-info").height(h2);
+		// } else {
+		// 	$(".post-info").height("auto");
+		// 	$(".post-content *:first-child").height("auto");
+		// }
 	});
 	
 	$(window).scroll(function(){
