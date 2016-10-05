@@ -523,7 +523,11 @@ input[type="button"],
 	left: 5%;
 }
 
-.header-blank { height:100%; display:block; width: 100%; background-color: #d8d8d8; margin-bottom: 10%; }
+.header-blank { height:100%; display:block; width: 100%; background-color: #d8d8d8; margin-bottom: 10%; background-size: cover; background-repeat: no-repeat;}
+.header-blank .post-meta { margin-top: 0px; }
+.header-blank .post-meta .post-meta-key { display: none; }
+.header-blank .post-meta li { font-size: 3em; font-weight: bold; color: #000; top: 30%; left: 20%; position: absolute; max-width: 60%; line-height: 1.2; }
+
 
 .blog-title {
 	font-size: 2em;
@@ -542,6 +546,8 @@ input[type="button"],
 	-o-transition: opacity 0.1s ease-in-out;
 	transition: opacity 0.1s ease-in-out;
 	color: #000;
+	opacity: 0;
+	visibility: hidden;
 
 }
 
@@ -1154,13 +1160,16 @@ a.post:hover .post-overlay {
 .post-content blockquote {
 	margin: 30px 0;
 	padding: 30px;
-	background: #fafafa;
+	/*background: #fafafa;*/
 	position: relative;
-	color: #666;
-	font-style: italic;
+	color: #000;
+	font-size: 3em;
+	font-weight: bold !important;
+	line-height: 1.2 !important;
+	/*font-style: italic;*/
 }
 
-.post-content blockquote p { font-style: italic; }
+/*.post-content blockquote p { font-style: italic; }*/
 
 .post-content cite { margin-top: 25px; }
 
@@ -1334,8 +1343,8 @@ code, kbd, pre {
 
 .post-content .aligncenter {
 	display: block;
-	margin-left: auto;
-	margin-right: auto;
+	margin: 30px auto 30px -16.67%;
+	min-width: 133%;
 }
 
 .post-content .alignnone {
@@ -2143,7 +2152,7 @@ img#wpstats { display: none; }
 	.single .content { max-width: 100%; }
 
 	.header-blank { margin-bottom: 0px; }
-		
+	.header-blank .post-meta li { left: 12.5%; max-width: 75%; }
 	
 	/* Navigation --------------------------------------- */	
 	

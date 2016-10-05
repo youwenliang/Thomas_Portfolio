@@ -1,5 +1,7 @@
 <?php get_header(); ?>
-<div class="header-blank"></div>
+<div class="header-blank" style="margin-bottom: 0%; background-image: url(<?php the_post_thumbnail_url();?>)">
+	<?php the_meta(); ?>
+</div>
 <div class="content section-inner">
 											        
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
@@ -10,25 +12,7 @@
 				
 				<?php $post_format = get_post_format(); ?>
 				
-				<?php if ( $post_format == 'gallery' ) : ?>
-				
-					<div class="featured-media">	
-		
-						<?php hitchcock_flexslider('post-image'); ?>
-						
-						<div class="clear"></div>
-						
-					</div> <!-- /featured-media -->
-					
-				<?php elseif ( has_post_thumbnail() ) : ?>
-						
-					<div class="featured-media">
-			
-						<?php the_post_thumbnail('post-image'); ?>
-						
-					</div> <!-- /featured-media -->
-						
-				<?php endif; ?>
+				<!-- feature image -->
 				
 				<div class="post-inner">
 					<div class="post-info">

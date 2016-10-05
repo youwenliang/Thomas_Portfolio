@@ -1,6 +1,10 @@
 jQuery(document).ready(function($) {
 	
-	
+	if($(window).scrollTop() <= 30) {
+		$('.blog-title').css('opacity', 1);
+		$('.blog-title').css('visibility', 'visible');
+	}
+
 	// Enable dropdown menus on touch devices
 	$( '.main-menu li:has(ul)' ).doubleTapToGo();
 	
