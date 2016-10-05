@@ -8,7 +8,6 @@ jQuery(document).ready(function($) {
 	// Enable dropdown menus on touch devices
 	$( '.main-menu li:has(ul)' ).doubleTapToGo();
 	
-	
 	// Toggle navigation
 	$(".blog-title").on("click", function(){	
 		$(this).toggleClass("active");
@@ -54,9 +53,15 @@ jQuery(document).ready(function($) {
 		$(".post-content *:first-child").height("auto");
 	}
 	
+	
+	$(".header-blank").height($(".header-blank .post-meta li").height() + 1.5 * $(".header-blank .post-meta li").offset().top);
+	if($(".header-blank").height() < $(window).height()) $(".header-blank").height($(window).height());
+
 	// Hide mobile-navigation > 900
 	$(window).resize(function() {
-		console.log("!!");
+		$(".header-blank").height($(".header-blank .post-meta li").height() + 1.5 * $(".header-blank .post-meta li").offset().top);
+		if($(".header-blank").height() < $(window).height()) $(".header-blank").height($(window).height());
+
 		if ($(window).width() > 900) {
 			$(".nav-toggle").removeClass("active");
 			$(".mobile-navigation").hide();

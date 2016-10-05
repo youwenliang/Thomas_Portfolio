@@ -1,6 +1,6 @@
 <?php $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'post-thumb' ); ?>
 
-<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>" <?php post_class('post'); ?> style="background-image: url(<?php echo $thumb['0']; ?>);">
+<a href="<?php the_permalink(); ?>" id="post-<?php the_ID(); ?>" <?php post_class('post'); ?> style="background-image: url(<?php the_post_thumbnail_url();?>);">
 
 	<div class="post-overlay">
 		

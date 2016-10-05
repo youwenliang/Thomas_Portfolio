@@ -1,5 +1,9 @@
 <?php get_header(); ?>
-<div class="header-blank"></div>
+<div class="header-blank">
+	<ul class="post-meta">
+		<li><span class="post-meta-key">quote:</span> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</li>
+	</ul>
+</div>
 <div class="content section-inner">
 																	                    
 	<?php if (have_posts()) : ?>
