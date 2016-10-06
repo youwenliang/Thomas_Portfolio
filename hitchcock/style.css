@@ -2226,6 +2226,7 @@ img#wpstats { display: none; }
 		top: 20px;
 		left: 0px;
 		width: 100%;
+		padding-left: 0px;
 	}
 	
 	.post-title { font-size: 2em; }
