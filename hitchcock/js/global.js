@@ -58,14 +58,17 @@ jQuery(document).ready(function($) {
 	
 	// }
 	
-	
-	$(".header-blank").height($(".header-blank .post-meta li").height() + 1.5 * $(".header-blank .post-meta li").offset().top);
-	if($(".header-blank").height() < $(window).height()) $(".header-blank").height($(window).height());
+	if($(".header-blank .post-meta li").length != 0) {
+		$(".header-blank").height($(".header-blank .post-meta li").height() + 1.5 * $(".header-blank .post-meta li").offset().top);
+		if($(".header-blank").height() < $(window).height()) $(".header-blank").height($(window).height());
+	}
 
 	// Hide mobile-navigation > 900
 	$(window).resize(function() {
-		$(".header-blank").height($(".header-blank .post-meta li").height() + 1.5 * $(".header-blank .post-meta li").offset().top);
-		if($(".header-blank").height() < $(window).height()) $(".header-blank").height($(window).height());
+		if($(".header-blank .post-meta li").length != 0) {
+			$(".header-blank").height($(".header-blank .post-meta li").height() + 1.5 * $(".header-blank .post-meta li").offset().top);
+			if($(".header-blank").height() < $(window).height()) $(".header-blank").height($(window).height());
+		}
 
 		if ($(window).width() > 900) {
 			$(".nav-toggle").removeClass("active");

@@ -684,7 +684,7 @@ input[type="button"],
 /* -------------------------------------------------------------------------------- */
 
 
-.posts { margin-top: -3.95%; }
+.posts { margin-top: -3.95%; margin-bottom: 100px; }
 
 .posts .post {
 	display: block;
@@ -2141,6 +2141,13 @@ img#wpstats { display: none; }
 	
 }
 
+@media (max-height: 375px) {
+	.main-menu {
+		bottom: 0px;
+		top: 30px;
+	}
+}
+
 
 @media ( max-width: 782px ) {
 	
@@ -2157,6 +2164,10 @@ img#wpstats { display: none; }
 
 	.header-blank { margin-bottom: 0px; }
 	.header-blank .post-meta li { top: 20%; left: 12.5%; max-width: 75%; }
+
+	.main-menu a {
+		font-size: 2.5em;
+	}
 	
 	/* Navigation --------------------------------------- */	
 	
