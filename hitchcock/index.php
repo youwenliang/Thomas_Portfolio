@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 <div class="header-blank">
-	<ul class="post-meta">
+	<ul class="post-meta" id="header-quote">
 		<li><span class="post-meta-key">quote:</span> "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation."</li>
 	</ul>
 </div>

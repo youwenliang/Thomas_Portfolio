@@ -1,4 +1,6 @@
 jQuery(document).ready(function($) {
+
+	$('body').css('opacity', 1);
 	
 	if($(window).scrollTop() <= 30) {
 		$('.blog-title').css('opacity', 1);
@@ -15,6 +17,7 @@ jQuery(document).ready(function($) {
 		if($(this).hasClass("active")){
 			$('body').css('overflow-y', 'hidden');
 			// $(this).css('position','fixed');
+			$(".navigation").addClass('visible');
 			$(".navigation").css('visibility', 'visible');
 			$(".navigation").css('opacity', '1');
 			$(".blog-title a").css('color','#fff');
@@ -32,6 +35,7 @@ jQuery(document).ready(function($) {
 		$(".blog-title a").css('color','#000');
 		setTimeout(function(){
 			$(".navigation").css('visibility', 'hidden');
+			$(".navigation").removeClass('visible');
 		},200);
 	});
 
@@ -96,6 +100,13 @@ jQuery(document).ready(function($) {
 	
 	$(window).scroll(function(){
 		var timer = 0;
+		if($(".header-blank .post-meta li").length != 0) {
+			$('.header-blank .post-meta').css('opacity', 1-$(window).scrollTop()/($(".header-blank .post-meta li").offset().top + $(".header-blank .post-meta li").height()));
+		}
+
+		$(".header-blank").css("background-position", "50%"+ parseInt(40+20*$(window).scrollTop()/$(window).height()) +"%");
+		console.log($(".header-blank").css("background-position"));
+
 		if($(this).scrollTop() > 30 && $('.blog-title').css('opacity') == 1) {
 			$('.blog-title').css('opacity', 0);
 			window.clearTimeout(timer);
